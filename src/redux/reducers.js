@@ -8,8 +8,8 @@ function visibilityFilter(state = SHOW_ALL, action) {
         case SET_VISIBILITY_FILTER:
             return action.filter;
         default:
-            return state;
-    };
+            return state
+    }
 };
 
 function todos(state = [], action){
@@ -32,8 +32,8 @@ function todos(state = [], action){
                 return todo;
             });
         default:
-            return state;
-    };
+            return state
+    }
 };
 
 // Basic boilerplate logic for the main reducer
