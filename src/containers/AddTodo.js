@@ -2,6 +2,8 @@ import React from 'react'
 import { connect } from 'react-redux'
 import { addTodo } from '../redux/actions'
 
+// Doesn't need a map function because it is not passing props or actions to anything - just using them itself
+
 let AddTodo = ({ dispatch }) => {
   let input
 

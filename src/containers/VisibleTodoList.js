@@ -15,12 +15,14 @@ const getVisibleTodos = (todos, filter) => {
   }
 }
 
+// Calls the function above to calculate todos to pass into TodoList
 const mapStateToProps = state => {
   return {
     todos: getVisibleTodos(state.todos, state.visibilityFilter)
   }
 }
 
+// Assigns the toggleTodo action to an onClick function that is passed into TodoList
 const mapDispatchToProps = dispatch => {
   return {
     onTodoClick: id => {
@@ -29,6 +31,7 @@ const mapDispatchToProps = dispatch => {
   }
 }
 
+// connecting the map functions and TodoList gives TodoList access to the props and actions as props
 const VisibleTodoList = connect(
   mapStateToProps,
   mapDispatchToProps
